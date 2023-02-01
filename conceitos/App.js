@@ -3,6 +3,7 @@ import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native"
 import Atividade01 from "./Atividade01";
 import Atividade02 from "./Atividade02";
 import Atividade04 from "./Atividade04";
+import Atividade06 from "./Atividade06";
 
 // Componente
 export default function App(){
@@ -19,7 +20,8 @@ export default function App(){
   return(
     // <Atividade01 />
     // <Atividade02 />
-    <Atividade04 />
+    // <Atividade04 />
+    <Atividade06 />
     // <View>
     //   <Text style={{marginTop:30, fontSize:30, color:'blue', textAlign:'center'}}>{texto}</Text>
     //   <TextInput style={estilos.input} placeholder="Digite algo..." onChangeText={setTexto} />

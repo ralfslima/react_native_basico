@@ -3,25 +3,27 @@ import { useState } from "react";
 import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 // Componente
-export default function Atividade04(){
+export default function Atividade06(){
 
     // UseStates
-    const [valor, setValor] = useState('');
-    const [tabuada, setTabuada] = useState([]);
+    const [nota1, setNota1] = useState(0);
+    const [nota2, setNota2] = useState(0);
+    const [nota3, setNota3] = useState(0);
 
     // Função calcular
     const calcular = () => {
 
-        // Vetor temporário
-        let tabuadaTemp = [];
+        // Calcular média
+        let media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
 
-        // Laço
-        for(let i = 0; i<11; i++){
-            tabuadaTemp.push(i*valor);
+        // Condicional
+        if(media >= 7){
+            Alert.alert(`Aprovado com média ${media.toFixed(2)}`)
+        }else if(media >= 5){
+            Alert.alert(`Em exame com média ${media.toFixed(2)}`)
+        }else{
+            Alert.alert(`Reprovado com média ${media.toFixed(2)}`)
         }
-
-        // Envio a tabuadaTemp para o state tabuada
-        setTabuada(tabuadaTemp);
 
     }
 
@@ -32,19 +34,13 @@ export default function Atividade04(){
                 <Image source={require('./imagens/02.png')} />
             </View>
 
-            <TextInput placeholder="Informe um valor" style={estilos.input} onChangeText={setValor} />
+            <TextInput placeholder="Informe a 1ª nota" style={estilos.input} onChangeText={setNota1} />
+            <TextInput placeholder="Informe a 2ª nota" style={estilos.input} onChangeText={setNota2} />
+            <TextInput placeholder="Informe a 3ª nota" style={estilos.input} onChangeText={setNota3} />
 
             <TouchableOpacity style={estilos.botao} onPress={calcular}>
                 <Text style={estilos.txtBotao}>Enviar</Text>
             </TouchableOpacity>
-
-            <ScrollView>
-
-                {tabuada.map((resultado, indice) => {
-                    return(<Text style={estilos.tabuada} key={indice}>{resultado}</Text>);
-                })}
-
-            </ScrollView>
         </View>
     )
 
