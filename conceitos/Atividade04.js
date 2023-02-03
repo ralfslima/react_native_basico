@@ -1,6 +1,6 @@
-import { Picker } from "@react-native-picker/picker";
+// Importar módulos
 import { useState } from "react";
-import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 // Componente
 export default function Atividade04(){
@@ -29,7 +29,7 @@ export default function Atividade04(){
     return(
         <View style={estilos.conteudo}>
             <View style={estilos.imagem}>
-                <Image source={require('./imagens/02.png')} />
+                <Image source={require('./imagens/04.png')} style={estilos.tamanhoImagem} />
             </View>
 
             <TextInput placeholder="Informe um valor" style={estilos.input} onChangeText={setValor} />
@@ -40,8 +40,9 @@ export default function Atividade04(){
 
             <ScrollView>
 
-                {tabuada.map((resultado, indice) => {
-                    return(<Text style={estilos.tabuada} key={indice}>{resultado}</Text>);
+                {
+                tabuada.map((resultado, indice) => {
+                    return(<Text style={estilos.tabuada} key={indice}>{valor} X {indice} = {resultado}</Text>);
                 })}
 
             </ScrollView>
@@ -59,7 +60,12 @@ const estilos = StyleSheet.create({
     },
     imagem:{
         alignItems:'center',
-        marginBottom:20
+        marginBottom:20,
+        marginTop:100
+    },
+    tamanhoImagem:{
+        width:200,
+        height:200
     },
     input:{
         borderRadius:5,
@@ -84,6 +90,7 @@ const estilos = StyleSheet.create({
         backgroundColor:'#281fd1',
         margin:10,
         padding:13,
+        marginBottom:30
     },
     txtBotao:{
         color: '#ffffff',

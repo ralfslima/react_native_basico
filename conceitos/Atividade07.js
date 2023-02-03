@@ -2,15 +2,24 @@ import { useState } from "react";
 import { Alert, Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 // Componente
-export default function Atividade03(){
+export default function Atividade01(){
 
     // useState
-    const [nome, setNome] = useState('');
+    const [valor1, setValor1] = useState(0);
+    const [valor2, setValor2] = useState(0);
+    const [valor3, setValor3] = useState(0);
 
     // Função de concatenação
     const acao = () => {
-        // Alert.alert('Boa noite' + nome);
-        Alert.alert(`Boa noite ${nome}`);
+        
+        if(valor1 < valor2 && valor1 < valor3){
+            Alert.alert(valor1);
+        }else if(valor2 < valor1 && valor2 < valor3){
+            Alert.alert(valor2);
+        }else{
+            Alert.alert(valor3);
+        }
+
     }
 
     // Estrutura do app
@@ -18,10 +27,12 @@ export default function Atividade03(){
         <SafeAreaView style={estilos.conteudo}>
             
             <View style={estilos.centralizar}>
-                <Image source={require('./imagens/01.png')} style={estilos.imagem} />
+                <Image source={require('./imagens/07.png')} style={estilos.imagem} />
             </View>
 
-            <TextInput style={estilos.input} placeholder='Informe seu nome' onChangeText={setNome} />
+            <TextInput style={estilos.input} placeholder='Número 1' onChangeText={setValor1} />
+            <TextInput style={estilos.input} placeholder='Número 2' onChangeText={setValor2} />
+            <TextInput style={estilos.input} placeholder='Número 3' onChangeText={setValor3} />
 
             <View style={estilos.centralizar}>
                 <TouchableOpacity style={estilos.botao} onPress={acao}>
@@ -35,7 +46,6 @@ export default function Atividade03(){
 // CSS
 const estilos = StyleSheet.create({
     conteudo:{
-        backgroundColor:'#1f9e1b',
         flex:1,
         justifyContent:'center'
     },
@@ -52,6 +62,10 @@ const estilos = StyleSheet.create({
         borderStyle:'solid',
         borderColor:'#e8e8e8',
         borderWidth:1
+    },
+    valorConvertido:{
+        textAlign:'center',
+        fontWeight:'bold'
     },
     botao:{
         backgroundColor:'#155413',

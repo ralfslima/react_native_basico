@@ -1,6 +1,6 @@
-import { Picker } from "@react-native-picker/picker";
+// Importar módulos
 import { useState } from "react";
-import { Alert, Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 // Componente
 export default function Atividade06(){
@@ -31,7 +31,7 @@ export default function Atividade06(){
     return(
         <View style={estilos.conteudo}>
             <View style={estilos.imagem}>
-                <Image source={require('./imagens/02.png')} />
+                <Image source={require('./imagens/06.png')} style={estilos.tamanhoImagem} />
             </View>
 
             <TextInput placeholder="Informe a 1ª nota" style={estilos.input} onChangeText={setNota1} />
@@ -56,6 +56,10 @@ const estilos = StyleSheet.create({
     imagem:{
         alignItems:'center',
         marginBottom:20
+    },
+    tamanhoImagem:{
+        width:200,
+        height:200
     },
     input:{
         borderRadius:5,
