@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Alert, Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 // Componente
-export default function Atividade01(){
+export default function Atividade08(){
 
     // useState
     const [candidato1, setCandidato1] = useState(0);
