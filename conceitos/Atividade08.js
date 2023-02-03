@@ -84,8 +84,6 @@ export default function Atividade01(){
             }
         }
         
-
-        
         // Frase
         if(qtd == 1){
             return (`O vencedor da votação é ${nomes[0]}`);
@@ -99,7 +97,6 @@ export default function Atividade01(){
         }else{
             return 'Nenhum voto efetuado';
         }
-
     }
 
     // Estrutura do app
