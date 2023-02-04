@@ -165,7 +165,7 @@ const estilos = StyleSheet.create({
     situacao:{
         textAlign:'center',
         fontWeight:'bold',
-        marginTop:30,
-        fontSize:20
+        marginTop:20,
+        fontSize:16
     }
 });
