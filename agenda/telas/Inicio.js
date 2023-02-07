@@ -14,7 +14,7 @@ export default function Inicio(){
 
                 <TextInput style={estilos.input} placeholder="Nome de usuário"              right={<TextInput.Icon icon="account" />} />
                 <TextInput style={estilos.input} placeholder="Senha" secureTextEntry={true} right={<TextInput.Icon icon="lock" />}    />
-                <Button mode="contained">Logar</Button>
+                <Button    style={estilos.botao} mode="contained">Logar</Button>
             </View>
 
         </View>
@@ -35,5 +35,8 @@ const estilos = StyleSheet.create({
     input:{
         marginBottom: 10,
         width: 250
+    },
+    botao:{
+        width: 100
     }
 });
