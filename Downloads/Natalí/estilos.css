@@ -1,0 +1,1633 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+
+html{
+    font-family: 'Actor', sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+/* TOPO FLUTUANTE */
+.topoFlutuante{
+    min-width: 100%;
+    display: none;
+    position: fixed;
+    background-color: #236636;
+    top: 0;
+    z-index: 100;
+}
+
+.topoFlutuante .navbar-brand > img{
+    width: 100px;
+}
+
+/* TOPO */
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-item{
+    padding-top: 15px;
+}
+
+.nav-link{
+    border-bottom: solid 1px #ffffff00;
+}
+
+.nav-link:hover{
+    cursor: pointer;
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+}
+
+/* 1120px ou superior */
+@media screen and (min-width: 1120px) {
+    header{
+        background-image: url("imagens/topo.png");
+        max-width: 1600px;
+        height: 675px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .navbar-brand img{
+        width: 200px;
+    }
+    
+    .nav-link{
+        color: #ffffff;
+    }
+    
+    .textoBanner{
+        color: #ffffff;
+    }
+    
+    .textoBanner h1{
+        font-weight: normal;
+        font-size: 40px;
+        width: 500px;
+        margin-bottom: 30px;
+        line-height: 55px;
+        margin-top: 60px;
+    }
+    
+    .textoBanner h2{
+        font-weight: normal;
+        font-size: 16px;
+        width: 530px;
+        margin-bottom: 30px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    
+    .textoBanner a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #20B038;
+        padding: 15px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 210px;
+        font-size: 18px;
+    }
+    
+    .pessoa{
+        width: 450px;
+        margin-right: 100px;
+    }
+}
+
+/* 900px até 1119px */
+@media screen and (min-width: 900px) and (max-width: 1119px) {
+    header{
+        background-image: url("imagens/topo.png");
+        max-width: 1600px;
+        height: 673px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .navbar-brand img{
+        width: 200px;
+    }
+    
+    .nav-link{
+        color: #ffffff;
+    }
+    
+    .textoBanner{
+        color: #ffffff;
+    }
+    
+    .textoBanner h1{
+        font-weight: normal;
+        font-size: 40px;
+        width: 500px;
+        margin-bottom: 30px;
+        line-height: 55px;
+        margin-top: 10px;
+    }
+    
+    .textoBanner h2{
+        font-weight: normal;
+        font-size: 16px;
+        width: 450px;
+        margin-bottom: 30px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    
+    .textoBanner a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #20B038;
+        padding: 15px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 210px;
+        font-size: 18px;
+    }
+    
+    .pessoa{
+        width: 400px;
+        margin-left: -20px;
+    }  
+}
+
+/* Até 899px */
+@media screen and (max-width: 899px) {
+    header{
+        background-image: url("imagens/topo.png");
+        max-width: 1600px;
+        height: 673px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    
+    .navbar-brand img{
+        width: 200px;
+    }
+    
+    .nav-link{
+        color: #ffffff;
+    }
+    
+    .textoBanner{
+        color: #ffffff;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .textoBanner h1{
+        font-weight: normal;
+        font-size: 40px;
+        margin-bottom: 30px;
+        line-height: 55px;
+        margin-top: 50px;
+    }
+    
+    .textoBanner h2{
+        font-weight: normal;
+        font-size: 16px;
+        margin-bottom: 50px;
+        line-height: 30px;
+    }
+    
+    .textoBanner a{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #20B038;
+        padding: 15px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 210px;
+        font-size: 18px;
+    }
+    
+    .pessoa{
+        display: none;
+    }     
+}
+
+/* SOBRE A CAMPOS TREINAMENTOS */
+/* 1120px ou superior */
+@media screen and (min-width: 1120px) {
+    .txtSobre{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+    }
+    
+    .txtSobre h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    
+    .txtSobre p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+    
+    .valores{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+    
+    .valores p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+    
+    .imgSobre{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .imgSobre img:first-child{
+        width: 60%;
+    }
+    
+    .imgSobre img:nth-child(2){
+        margin-top: 5%;
+        width: 80%;
+    }
+}
+
+/* Máximo 1119px */
+@media screen and (max-width: 1119px) {
+    .txtSobre{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        margin-top: -30px;
+    }
+    
+    .txtSobre h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+    
+    .txtSobre p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+    
+    .valores{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+    
+    .valores p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+    
+    .imgSobre{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .imgSobre img:first-child{
+        width: 60%;
+    }
+    
+    .imgSobre img:nth-child(2){
+        margin-top: 5%;
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .imgSobre{
+        display: none;
+    }
+}
+
+/* SOBRE NATALÍ */
+/* 1120px ou superior */
+@media screen and (min-width: 1120px) {
+    .sobreNatali{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 930px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .imgSobreNatali{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 70px;
+    }
+
+    .imgSobreNatali img{
+        margin-top: 30px;
+        width: 60%;
+    }
+
+    .imgSobreNatali h1{
+        color: #646464;
+        font-weight: normal;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imgSobreNatali p{
+        color: #646464;
+        margin-top: 10px;
+        width: 360px;
+        margin-left: 20px;
+        text-align: justify;
+    }
+
+    .imgSobreNatali a{
+        display: flex;
+        align-items: center;
+        width: 220px;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .txtSobreNatali > h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+        margin-left: 100px;
+        width: 70%;
+        margin-top: 70px;
+    }
+
+    .txtSobreNatali > p{
+        margin-left: 100px;
+        width: 70%;
+        color: #646464;
+        text-align: justify;
+        margin-top: 30px;
+    }
+
+    .areasDeAtuacao{
+        list-style: none;
+        text-align: center;
+        margin-top: 70px;
+        display: flex;
+    }
+
+    .areasDeAtuacao li{
+        background-color: #FBFBFB;
+        border-radius: 8px;
+        margin: 5px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px #dadada;
+        width: 230px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .areasDeAtuacao img{
+        width: 70px;
+    }
+
+    .areasDeAtuacao h2{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .areasDeAtuacao p{
+        text-align: justify;
+        color: #646464;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .areasDeAtuacao a{
+        display: inline-block;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .atuacaoMobile{
+        display: none;
+    }
+}
+
+/* 900px até 1119px */
+@media screen and (min-width: 900px) and (max-width: 1119px) {
+    .sobreNatali{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 1090px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .imgSobreNatali{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 70px;
+    }
+
+    .imgSobreNatali img{
+        margin-top: 30px;
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    .imgSobreNatali h1{
+        color: #646464;
+        font-weight: normal;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imgSobreNatali p{
+        color: #646464;
+        margin-top: 10px;
+        width: 360px;
+        margin-left: 20px;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .imgSobreNatali a{
+        display: flex;
+        align-items: center;
+        width: 220px;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .txtSobreNatali > h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+        margin-left: 100px;
+        width: 70%;
+        margin-top: 70px;
+    }
+
+    .txtSobreNatali > p{
+        margin-left: 100px;
+        width: 70%;
+        color: #646464;
+        text-align: justify;
+        margin-top: 30px;
+    }
+
+    .areasDeAtuacao{
+        display: none;
+    }
+
+    .infoAtuacaoMobile{
+        background-color: #FBFBFB;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px #dadada;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .atuacaoMobile img{
+        width: 70px;
+    }
+
+    .atuacaoMobile h2{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .atuacaoMobile p{
+        text-align: justify;
+        color: #646464;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .atuacaoMobile a{
+        display: inline-block;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Até 899px */
+@media screen and (max-width: 899px) {
+    .sobreNatali{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .imgSobreNatali{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 70px;
+    }
+
+    .imgSobreNatali img{
+        margin-top: 50px;
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    .imgSobreNatali h1{
+        color: #646464;
+        font-weight: normal;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .imgSobreNatali p{
+        color: #646464;
+        margin-top: 10px;
+        width: 90%;
+        margin-left: 20px;
+        text-align: justify;
+    }
+
+    .imgSobreNatali a{
+        display: flex;
+        align-items: center;
+        width: 220px;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .txtSobreNatali > h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+        margin-left: 100px;
+        width: 70%;
+        margin-top: 70px;
+    }
+
+    .txtSobreNatali > p{
+        margin-left: 100px;
+        width: 70%;
+        color: #646464;
+        text-align: justify;
+        margin-top: 30px;
+    }
+
+    .areasDeAtuacao{
+        display: none;
+    }
+
+    .atuacaoMobile{
+        background-color: #ffffff;
+    }
+
+    .infoAtuacaoMobile{
+        background-color: #FBFBFB;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px #dadada;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .atuacaoMobile img{
+        width: 70px;
+    }
+
+    .atuacaoMobile h2{
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    .atuacaoMobile p{
+        text-align: justify;
+        color: #646464;
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .atuacaoMobile a{
+        display: inline-block;
+        background-color: #1D5A2E;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1121px) and (max-width: 1290px) {
+    
+    .sobreNatali{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 1000px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+}
+
+
+/* Owl-carousel */
+.owl-carousel .nav-btn{
+    height: 47px;
+    position: absolute;
+    width: 26px;
+    cursor: pointer;
+    top: 150px !important;
+  }
+  
+  
+.owl-carousel .prev-slide{
+left: -33px;
+color: #20744A;
+}
+.owl-carousel .next-slide{
+right: -15px;
+color: #20744A;
+}
+
+.owl-theme .owl-dots .owl-dot{
+color: #20744A !important;
+}
+.owl-dot{
+    color: #20744A;
+}
+
+.owl-carousel .prev-slide:hover{
+background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover{
+background-position: -24px -53px;
+}   
+
+/* CONSULTORIAS */
+/* 1120px ou superior */
+@media screen and (min-width: 1120px) {
+    .txtConsultoria{
+        margin-top: 50px;
+    }
+
+  .txtConsultoria h1{
+    padding-top: 30px;
+    color: #646464;
+    font-weight: normal;
+  }
+
+  .txtConsultoria p{
+    color: #646464;
+    margin-top: 30px;
+    width: 80%;
+    text-align: justify;
+  }
+  .owl-carousel {
+    width: 685px;
+  }
+
+  .owl-carousel .card{
+    width: 210px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 75px;
+    border: solid 1px #d8d8d8;
+    padding: 5px;
+  }
+
+  .imgConsultoria{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 100%;
+  }
+}
+
+/* Até 1119px */
+@media screen and (max-width: 1119px) {
+    .txtConsultoria{
+        margin-top: 50px;
+    }
+
+  .txtConsultoria h1{
+    color: #646464;
+    font-weight: normal;
+  }
+
+  .txtConsultoria p{
+    color: #646464;
+    margin-top: 30px;
+    text-align: justify;
+  }
+
+  .owl-carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .owl-carousel .card{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    border: solid 1px #d8d8d8;
+    padding: 5px;
+  }
+
+  .imgConsultoria{
+    display: none;
+  }
+}
+
+/* RODAPÉ */
+/* A partir de 768px */
+@media screen and (min-width: 768px) {
+    footer{
+        background-color: #236636;
+    }
+
+    .rodapeEsquerdo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .rodapeEsquerdo div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 40px;
+        min-height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rodapeEsquerdo i{
+        color: #ffffff;
+        font-size: 25px;
+    }
+
+    .logoRodape{
+        width: 50%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .direitosReservados{
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .linksRodape{
+        text-align: right;
+    }
+
+    .linksRodape a,
+    .linksRodape p{
+        display: inline-block;
+        margin-top: 40px;
+        margin-right: 30px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+/* Até 767px */
+@media screen and (max-width: 767px) {
+    footer{
+        background-color: #236636;
+        margin-top: 60px;
+    }
+
+    .rodapeEsquerdo{
+        text-align: center;
+    }
+
+    .rodapeEsquerdo div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rodapeEsquerdo i{
+        color: #ffffff;
+        font-size: 25px;
+        margin: 0 20px;
+    }
+
+    .logoRodape{
+        margin-top: 40px;
+    }
+
+    .direitosReservados{
+        text-align: center;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .linksRodape{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .linksRodape a,
+    .linksRodape p{
+        display: inline-block;
+        margin-top: 40px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+/* PÁGINA DE TECNOLOGIA */
+/* 1120px ou superior */
+@media screen and (min-width: 992px) {
+    .pessoaTecnologia{
+        margin-top: 140px;
+    }
+    
+    .txtSobreTreinamento{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento img{
+        width: 60%;
+    }
+
+    .modalidadeTreinamento{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .agruparTxtSobreTreinamento2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .txtSobreTreinamento2{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        width: 80%;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento2 h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento2 p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento2{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento2 p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento2{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento2 a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento2{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento2 img{
+        width: 70%;
+    }
+
+    .modalidadeTreinamento2{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .fundoPowerPoint{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 730px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .word{
+        padding-top: 50px;
+    }
+}
+
+/* 900px até 1119px */
+@media screen and (min-width: 900px) and (max-width: 991px) {
+    .pessoaTecnologia{
+        margin-top: 220px;
+        width: 100%;
+    }
+    
+    .txtSobreTreinamento{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento img{
+        display: none;
+    }
+
+    .modalidadeTreinamento{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .agruparTxtSobreTreinamento2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .txtSobreTreinamento2{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        width: 80%;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento2 h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento2 p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento2{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento2 p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento2{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento2 a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento2{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento2 img{
+        display: none;
+    }
+
+    .modalidadeTreinamento2{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .fundoPowerPoint{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 730px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .word{
+        padding-top: 50px;
+    }
+}
+
+/* Até 899px */
+@media screen and (max-width: 899px) {
+    .pessoaTecnologia{
+        display: none;
+    }
+    
+    .txtSobreTreinamento{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento img{
+        display: none;
+    }
+
+    .modalidadeTreinamento{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .agruparTxtSobreTreinamento2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .txtSobreTreinamento2{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        width: 80%;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+
+    .txtSobreTreinamento2 h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .txtSobreTreinamento2 p{
+        margin-top: 30px;
+        text-align: justify;
+        line-height: 28px;
+        color: #646464;
+    }
+
+    .valoresTreinamento2{
+        list-style-image: url("imagens/icone_lista.png");
+        color: #646464;
+        margin-left: 10px;
+    }
+
+    .valoresTreinamento2 p{
+        margin: 0;
+        padding-left: 5px;
+        margin-top: -30px;
+        position: absolute;
+    }
+
+    .linkWhatsAppTreinamento2{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        justify-content: center;
+
+    }
+
+    .txtSobreTreinamento2 a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1D5A2E;
+        padding: 10px;
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        width: 180px;
+        font-size: 16px;
+    }
+
+    .imgSobreTreinamento2{
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgSobreTreinamento2 img{
+        display: none;
+    }
+
+    .modalidadeTreinamento2{
+        color: #1D5A2E !important;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .fundoPowerPoint{
+        background-image: url("imagens/fundo_sobre.png");
+        background-size: 100% 100%;
+        max-width: 1600px;
+        height: 730px;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+    }
+
+    .word{
+        padding-top: 50px;
+    }
+}
+
+/* CONTATO */
+/* 1200px ou superior */
+@media screen and (min-width:1200px) {
+    .pessoaContato{
+        margin-top: 50px;
+    }
+
+    .contato{
+        margin-top: 40px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+    
+    .contato h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    
+    .contato p{
+        color: #646464;
+    }
+    
+    .contato form{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    
+    .contato form input[type="text"]{
+        width: 500px;
+        height: 50px;
+    }
+    
+    .contato form input[type="text"]:nth-child(2){
+        margin: 25px 0;
+    }
+    
+    .contato form textarea{
+        width: 500px;
+        height: 200px;
+        resize: none;
+    }
+    
+    .contato form input[type="submit"]{
+        margin-top: 20px;
+        background-color: #1D5A2E;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        padding: 10px 50px;
+    }
+}
+
+/* 990px até 1199px */
+@media screen and (min-width:990px) and (max-width:1199px){
+    .pessoaContato{
+        margin-top: 48px;
+    }
+
+    .contato{
+        margin-top: 40px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+    
+    .contato h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    
+    .contato p{
+        color: #646464;
+    }
+    
+    .contato form{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    
+    .contato form input[type="text"]{
+        width: 400px;
+        height: 50px;
+    }
+    
+    .contato form input[type="text"]:nth-child(2){
+        margin: 25px 0;
+    }
+    
+    .contato form textarea{
+        width: 400px;
+        height: 200px;
+        resize: none;
+    }
+    
+    .contato form input[type="submit"]{
+        margin-top: 20px;
+        background-color: #1D5A2E;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        padding: 10px 50px;
+    }
+}
+
+/* Abaixo de 990px */
+@media screen and (max-width:989px){
+    .pessoaContato{
+        display: none;
+    }
+    .contato{
+        margin-top: 40px;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 50px;
+        box-shadow: 1px 1px 10px #d8d8d8;
+    }
+    
+    .contato h1{
+        color: #646464;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    
+    .contato p{
+        color: #646464;
+    }
+    
+    .contato form{
+        margin-top: 40px;
+    }
+    
+    .contato form input[type="text"]{
+        width: 100%;
+        height: 50px;
+    }
+    
+    .contato form input[type="text"]:nth-child(2){
+        margin: 25px 0;
+    }
+    
+    .contato form textarea{
+        width: 100%;
+        height: 200px;
+        resize: none;
+        margin-top: 25px;
+    }
+
+    .centralizarBotaoContato{
+        text-align: center;
+    }
+    
+    .contato form input[type="submit"]{
+        margin-top: 20px;
+        background-color: #1D5A2E;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        padding: 10px 50px;
+    }
+}

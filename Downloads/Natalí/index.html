@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos Treinamentos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+    <script>
+
+        
+        let scrollSobre = 0;
+        let scrollTreinamentos = 0;
+        let scrollConsultoria = 0;
+
+
+      $(document).ready(function(){
+        let largura = document.getElementsByTagName("body")[0].offsetWidth;
+
+        console.log(largura);
+
+        if(largura >= 1120){
+            scrollSobre = 582;
+            scrollTreinamentos = 1350;
+            scrollConsultoria = 2230;
+        }else if(largura >= 900){
+            scrollSobre = 555;
+            scrollTreinamentos = 1300;
+            scrollConsultoria = 3420;
+        }else{
+            scrollSobre = 552;
+            scrollTreinamentos = 1300;
+            scrollConsultoria = 3475;
+        }
+
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    autoplay:5000,
+    nav:true,
+    navText : ["<i class='fa fa-chevron-left nav-btn prev-slide'></i>","<i class='fa fa-chevron-right nav-btn next-slide'></i>"],
+    responsive:{
+                    0:{
+                        items:2
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+            })
+
+        
+        
+        // Topo flutuante
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() >= 400) {
+                $("body").css("padding-top", "0px");
+                $(".topoFlutuante").css("display","inline-block");
+            }else{
+                $("body").css("padding-top", "0");
+                $(".topoFlutuante").css("display","none");
+            }
+            
+        });  
+    }); 
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Topo flutuante -->
+    <nav class="navbar navbar-expand-xl topoFlutuante">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="imagens/logo_branca.png" alt="Logo da Campos Treinamentos">
+            </a>
+            
+            <!-- Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <p class="nav-link" onclick="window.scrollTo(0, scrollSobre)">Campos Treinamentos</p>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <p class="nav-link" onclick="window.scrollTo(0, scrollTreinamentos)">Treinamentos</p>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Barra de navegação -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-xl">
+                        <div class="container-fluid">
+                            <!-- Logo -->
+                            <a class="navbar-brand" href="index.html">
+                                <img src="imagens/logo_branca.png" alt="Logo da Campos Treinamentos">
+                            </a>
+                            
+                            <!-- Mobile -->
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            
+                            <!-- Links -->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Início</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <p class="nav-link" onclick="window.scrollTo(0, scrollSobre)">Campos Treinamentos</p>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <p class="nav-link" onclick="window.scrollTo(0, scrollTreinamentos)">Treinamentos</p>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                                    </li>
+                                    
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contato.html">Contato</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Textos e imagem de pessoas -->
+        <div class="container">
+            <div class="row">
+                <div class="col-6 textoBanner">
+                    <h1>Bem vindo a Campos Treinamentos e Consultoria</h1>
+                    <h2>Escola especializada em treinamentos profissionais e corporativos com diversas soluções em: Gestão, Microsoft, Desenvolvimento e Tecnologia.</h2>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Converse conosco</a>
+                </div>
+
+                <div class="col-6">
+                    <img src="imagens/topo_inicio.png" class="pessoa">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdos -->
+    <main id="sobre">
+        <!-- Sobre a Campos Treinamentos -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="imgSobre">
+                        <img src="imagens/logo.png" alt=""> 
+                        <img src="imagens/sobre.png" alt=""> 
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="txtSobre">
+                        <h1>Campos Treinamentos</h1>
+                        <p>Há mais de 10 anos desenvolvendo pessoas através da educação, e para as organizações, a Campos Treinamentos atua como parceira através de capacitações, mentorias e consultorias voltadas ao seu recurso principal: AS PESSOAS.</p>
+                        <p>Do pinhão, semente encontradas nos campos do planalto e oeste catarinense, nasce uma árvore bela, forte, altiva e persistente, a Araucária. Nossa meia pinha representa a nossa preocupação em disseminar nossas sementes de conhecimento. As cinco setas representam nossos valores.</p>
+                        <p>Valores:</p>
+                        <ul class="valores">
+                            <li><p>Ética</p></li>
+                            <li><p>Humildade</p></li>
+                            <li><p>Coragem</p></li>
+                            <li><p>Pessoas</p></li>
+                            <li><p>Responsabilidade</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Sobre Natalí -->
+        <div class="container sobreNatali">
+            <div class="row" id="treinamentos">
+                <div class="col-md-5">
+                    <div class="imgSobreNatali">
+                        <img src="imagens/natali.png" alt="">
+
+                        <h1>Treinamentos</h1>
+
+                        <p>Contamos com treinamentos de maneira presencial e online, ao vivo e gravadas.</p>
+                        <p>Além das turmas convencionais, a Campos Treinamentos dispõe e aulas VIP e treinamentos corporativos.</p>
+                    
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i>Faça o seu orçamento</a>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="txtSobreNatali">
+                        <h1>Natalí Campos</h1>
+                        <p>CEO da Campos Treinamentos, nexialista, professora atuando há mais de 18 anos com treinamentos, mestranda em Administração. Acredita que o grande tesouro da terra está na personalidade humana!</p>
+                        <p>Atua com treinamentos Microsoft (Excel, Power Point, Project, Word, etc), sendo uma das instrutoras certificadas Microsoft de Inovação em Educação (MIEE) reconhecidas mundialmente. Atua também com treinamento em Softs Skills e Gestão de Projetos. Vastos conhecimentos em projetos nas metodologias IPMA, Tevep e PMI, formação Dale Carnegie e Data Analytics.</p>
+                    
+                        <ul class="areasDeAtuacao">
+                            <li>
+                                <img src="imagens/computador.png" alt="">
+                                <h2>Tecnologia</h2>
+                                <p>Excel, PowerPoint, Word, Outlook, Figma, entre outros.</p>
+                                <a href="tecnologia.html">Ver treinamentos</a>
+                            </li>
+
+                            <li>
+                                <img src="imagens/alvo.png" alt="">
+                                <h2>Gestão</h2>
+                                <p>Gestão de Projetos, Planejamento Estratégico e Projetos Ágeis.</p>
+                                <a href="gestao.html">Ver treinamentos</a>
+                            </li>
+
+                            <li>
+                                <img src="imagens/pessoas.png" alt="">
+                                <h2>Desenvolvimento Humano</h2>
+                                <p>Soft Skills, Comunicação e Oratória, Inovação e Empreendedorismo.</p>
+                                <a href="desenvolvimento_humano.html">Ver treinamentos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Áreas de atuação versão mobile -->
+            <div class="row atuacaoMobile">
+                <div class="col-md-4">
+                    <div class="infoAtuacaoMobile">
+                        <img src="imagens/computador.png" alt="">
+                        <h2>Tecnologia</h2>
+                        <p>Excel, PowerPoint, Word, Outlook, Figma, entre outros.</p>
+                        <a href="">Ver treinamentos</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="infoAtuacaoMobile">
+                        <img src="imagens/alvo.png" alt="">
+                        <h2>Gestão</h2>
+                        <p>Gestão de Projetos, Planejamento Estratégico e Projetos Ágeis.</p>
+                        <a href="">Ver treinamentos</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="infoAtuacaoMobile">
+                        <img src="imagens/pessoas.png" alt="">
+                        <h2>Desenvolvimento Humano</h2>
+                        <p>Soft Skills, Comunicação e Oratória, Inovação e Empreendedorismo.</p>
+                        <a href="">Ver treinamentos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consultorias -->
+        <div class="container">
+            <div class="row" id="consultoria">
+                <div class="col-lg-8">
+                    <div class="txtConsultoria">
+                        <h1>Consultorias</h1>
+                        <p>Ajudamos seu negócio a crescer! Consultoria e mentoria em diversos temas: Planejamento Estratégico, Indicadores, Controladoria, Custos, Projetos, Processos, Implantações de Sistemas e Capacitações. Entre em contato!</p>
+                    </div>
+
+
+                        <div class="owl-carousel owl-theme">
+                          <div>
+                            <div class="card">
+                              <img src="imagens/clientes/01.png" alt="">
+                              <p>PHIZALIS</p>
+                            </div>
+                          </div>
+              
+                          <div>
+                            <div class="card">
+                                <img src="imagens/clientes/02.png" alt="">
+                                <p>La Tay</p>
+                            </div>
+                          </div>
+              
+                          <div>
+                            <div class="card">
+                                <img src="imagens/clientes/03.png" alt="">
+                                <p>BLUJET</p>
+                            </div>
+                          </div>
+            
+                      </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <img src="imagens/consultorias.png" alt="" class="imgConsultoria">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 rodapeEsquerdo">
+                    <img src="imagens/logo_branca.png" class="logoRodape" alt="">
+
+                    <div>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-9 linksRodape">
+                    <a class="nav-link" href="#">Início</a>
+                    <p class="nav-link" onclick="window.scrollTo(0, scrollSobre)">Campos Treinamentos</p>
+                    <p class="nav-link" onclick="window.scrollTo(0, scrollTreinamentos)">Treinamentos</p>
+                    <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                    <a class="nav-link" href="contato.html">Contato</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 direitosReservados">
+                    <p>Campos Treinamentos | Todos os direitos reservados - 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
