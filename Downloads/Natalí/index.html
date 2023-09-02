@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -36,16 +35,16 @@
 
         if(largura >= 1120){
             scrollSobre = 582;
-            scrollTreinamentos = 1350;
-            scrollConsultoria = 2230;
+            scrollTreinamentos = 1700;
+            scrollConsultoria = 2550;
         }else if(largura >= 900){
             scrollSobre = 555;
             scrollTreinamentos = 1300;
             scrollConsultoria = 3420;
         }else{
-            scrollSobre = 552;
-            scrollTreinamentos = 1300;
-            scrollConsultoria = 3475;
+            scrollSobre = 930;
+            scrollTreinamentos = 3150;
+            scrollConsultoria = 5100;
         }
 
         $('.owl-carousel').owlCarousel({
@@ -83,6 +82,15 @@
     }); 
     </script>
 
+    <!-- Caso seja realizado o envio de uma mensagem via formulário de contato -->
+    <script>
+        let url = window.location.href;
+        
+        if(url == "https://campostreinamentos.com.br/index.html?contatoEnviado"){
+            alert("Agradecemos seu contato, retornaremos em breve.");
+        }
+    </script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -117,7 +125,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultorias</p>
                     </li>
                     
                     <li class="nav-item">
@@ -165,7 +173,7 @@
                                     </li>
                                     
                                     <li class="nav-item">
-                                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                                        <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultorias</p>
                                     </li>
                                     
                                     <li class="nav-item">
@@ -185,7 +193,7 @@
                 <div class="col-6 textoBanner">
                     <h1>Bem vindo a Campos Treinamentos e Consultoria</h1>
                     <h2>Escola especializada em treinamentos profissionais e corporativos com diversas soluções em: Gestão, Microsoft, Desenvolvimento e Tecnologia.</h2>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Converse conosco</a>
+                    <a href="https://api.whatsapp.com/send?phone=554791645886&text=Ol%C3%A1,%20estou%20enviando%20essa%20mensagem%20atrav%C3%A9s%20do%20site%20da%20Campos%20Treinamentos." target="_blank"><i class="fa-brands fa-whatsapp"></i>Converse conosco</a>
                 </div>
 
                 <div class="col-6">
@@ -203,7 +211,14 @@
                 <div class="col-lg-6">
                     <div class="imgSobre">
                         <img src="imagens/logo.png" alt=""> 
-                        <img src="imagens/sobre.png" alt=""> 
+                        
+                        <div class="selos">
+                            <img src="imagens/selo1.png" alt="">
+                            <img src="imagens/selo2.png" alt="">
+                            <img src="imagens/selo3.png" alt="">
+                            <img src="imagens/selo4.png" alt="">
+                            <img src="imagens/selo5.png" alt="">
+                        </div>
                     </div>
                 </div>
 
@@ -214,12 +229,34 @@
                         <p>Do pinhão, semente encontradas nos campos do planalto e oeste catarinense, nasce uma árvore bela, forte, altiva e persistente, a Araucária. Nossa meia pinha representa a nossa preocupação em disseminar nossas sementes de conhecimento. As cinco setas representam nossos valores.</p>
                         <p>Valores:</p>
                         <ul class="valores">
-                            <li><p>Ética</p></li>
-                            <li><p>Humildade</p></li>
-                            <li><p>Coragem</p></li>
-                            <li><p>Pessoas</p></li>
-                            <li><p>Responsabilidade</p></li>
+                            <li><span>Ética</span></li>
+                            <li><span>Humildade</span></li>
+                            <li><span>Coragem</span></li>
+                            <li><span>Pessoas</span></li>
+                            <li><span>Responsabilidade</span></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <p class="txtSomosMembros">Somos membros:</p>
+                </div>
+                <div class="col-lg-3 somosMembros">
+                    <div class="card">
+                        <img src="imagens/ods.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 somosMembros">
+                    <div class="card">
+                        <img src="imagens/acate1.png" alt="">
+                        <img src="imagens/acate2.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 somosMembros">
+                    <div class="card">
+                        <img src="imagens/microsoft.png" alt="">
                     </div>
                 </div>
             </div>
@@ -235,10 +272,10 @@
 
                         <h1>Treinamentos</h1>
 
-                        <p>Contamos com treinamentos de maneira presencial e online, ao vivo e gravadas.</p>
+                        <p>Contamos com treinamentos de maneira presencial e online, aulas ao vivo e gravadas.</p>
                         <p>Além das turmas convencionais, a Campos Treinamentos dispõe e aulas VIP e treinamentos corporativos.</p>
                     
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i>Faça o seu orçamento</a>
+                        <a href="https://api.whatsapp.com/send?phone=554791645886&text=Ol%C3%A1,%20estou%20enviando%20essa%20mensagem%20atrav%C3%A9s%20do%20site%20da%20Campos%20Treinamentos." target="_blank"><i class="fa-brands fa-whatsapp"></i>Faça o seu orçamento</a>
                     </div>
                 </div>
 
@@ -281,7 +318,7 @@
                         <img src="imagens/computador.png" alt="">
                         <h2>Tecnologia</h2>
                         <p>Excel, PowerPoint, Word, Outlook, Figma, entre outros.</p>
-                        <a href="">Ver treinamentos</a>
+                        <a href="tecnologia.html">Ver treinamentos</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -289,7 +326,7 @@
                         <img src="imagens/alvo.png" alt="">
                         <h2>Gestão</h2>
                         <p>Gestão de Projetos, Planejamento Estratégico e Projetos Ágeis.</p>
-                        <a href="">Ver treinamentos</a>
+                        <a href="gestao.html">Ver treinamentos</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -297,7 +334,7 @@
                         <img src="imagens/pessoas.png" alt="">
                         <h2>Desenvolvimento Humano</h2>
                         <p>Soft Skills, Comunicação e Oratória, Inovação e Empreendedorismo.</p>
-                        <a href="">Ver treinamentos</a>
+                        <a href="desenvolvimento_humano.html">Ver treinamentos</a>
                     </div>
                 </div>
             </div>
@@ -317,24 +354,31 @@
                           <div>
                             <div class="card">
                               <img src="imagens/clientes/01.png" alt="">
-                              <p>PHIZALIS</p>
+                              <p>BLUJET</p>
                             </div>
-                          </div>
-              
-                          <div>
+                        </div>
+                        
+                        <div>
                             <div class="card">
                                 <img src="imagens/clientes/02.png" alt="">
+                                <p>PHIZALIS</p>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="card">
+                                <img src="imagens/clientes/03.png" alt="">
                                 <p>La Tay</p>
                             </div>
                           </div>
-              
+                        
                           <div>
-                            <div class="card">
-                                <img src="imagens/clientes/03.png" alt="">
-                                <p>BLUJET</p>
+                              <div class="card">
+                                  <img src="imagens/clientes/04.png" style="width: 70%; height: 70%;" alt="">
+                                  <p>Excel Engenharia Estrutural</p>
+                              </div>
                             </div>
-                          </div>
-            
+                          
                       </div>
                 </div>
 
@@ -353,9 +397,9 @@
                     <img src="imagens/logo_branca.png" class="logoRodape" alt="">
 
                     <div>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/campostreinamentos" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=554791645886&text=Ol%C3%A1,%20estou%20enviando%20essa%20mensagem%20atrav%C3%A9s%20do%20site%20da%20Campos%20Treinamentos." target="_blank"><i class="fa-brands fa-whatsapp" target="_blank"></i></a>
+                        <a href="https://www.linkedin.com/company/campos-treinamentos/about/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -363,7 +407,7 @@
                     <a class="nav-link" href="#">Início</a>
                     <p class="nav-link" onclick="window.scrollTo(0, scrollSobre)">Campos Treinamentos</p>
                     <p class="nav-link" onclick="window.scrollTo(0, scrollTreinamentos)">Treinamentos</p>
-                    <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                    <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultorias</p>
                     <a class="nav-link" href="contato.html">Contato</a>
                 </div>
             </div>

@@ -12,10 +12,12 @@
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
-
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- jQuery Máscara -->
+    <script type="text/javascript" src="mascara/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="mascara/jquery.mask.min.js"></script>
 
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
@@ -32,6 +34,8 @@
 
 
       $(document).ready(function(){
+        $('.ddd_tel').mask('(00) 00000-0000');
+
         let largura = document.getElementsByTagName("body")[0].offsetWidth;
 
         console.log(largura);
@@ -91,6 +95,38 @@
     }); 
     </script>
 
+    <!-- Validar o formulário -->
+    <script>
+        function validaForm(){
+            // Obter dados
+            let campoNome = document.getElementById("campoNome");
+            let campoEmail = document.getElementById("campoEmail");
+            let campoTelefone = document.getElementById("campoTelefone");
+            let campoMensagem = document.getElementById("campoMensagem");
+
+            //Validações
+            if(campoNome.value.length < 3){
+                campoNome.focus();
+                alert("Informe um nome válido");
+                return false;
+            }else if(campoEmail.value.indexOf("@") == -1 || campoEmail.value.indexOf(".") == -1 || campoEmail.value.length < 5){
+                campoEmail.focus();
+                alert("Informe um e-mail válido");
+                return false;
+            }else if(campoTelefone.value.length != 15){
+                campoTelefone.focus();
+                alert("Informe um telefone válido");
+                return false;
+            }else if(campoMensagem.value.length < 10){
+                campoMensagem.focus();
+                alert("Sua mensagem deve ter pelo menos dez caracteres.");
+                return false;
+            }
+
+            // Retorno
+            return true;
+        }
+    </script>
     <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -125,7 +161,7 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#consultoria">Consultoria</a>
+                        <a class="nav-link" href="index.html#consultoria">Consultorias</a>
                     </li>
                     
                     <li class="nav-item">
@@ -173,7 +209,7 @@
                                     </li>
                                     
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.html#consultoria">Consultoria</a>
+                                        <a class="nav-link" href="index.html#consultoria">Consultorias</a>
                                     </li>
                                     
                                     <li class="nav-item">
@@ -193,7 +229,7 @@
                 <div class="col-6 textoBanner">
                     <h1>Entre em contato com a Campos Treinamentos</h1>
                     <h2>Caso queira entrar em contato com a Campos Treinamentos, favor preencher o formulário abaixo.</h2>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i>Converse conosco</a>
+                    <a href="https://api.whatsapp.com/send?phone=554791645886&text=Ol%C3%A1,%20estou%20enviando%20essa%20mensagem%20atrav%C3%A9s%20do%20site%20da%20Campos%20Treinamentos." target="_blank"><i class="fa-brands fa-whatsapp"></i>Converse conosco</a>
                 </div>
 
                 <div class="col-6">
@@ -213,15 +249,15 @@
                 </div>
 
                 <div class="col-12">
-                    <form action="">
+                    <form action="enviar.php" method="post" onsubmit="return validaForm()">
                         <div>
-                            <input type="text" name="" id="" placeholder="Nome" class="form-control">
-                            <input type="text" name="" id="" placeholder="E-mail" class="form-control">
-                            <input type="text" name="" id="" placeholder="Telefone" class="form-control">
+                            <input type="text" name="nome" id="campoNome" placeholder="Nome" class="form-control">
+                            <input type="text" name="email" id="campoEmail" placeholder="E-mail" class="form-control">
+                            <input type="text" name="telefone" id="campoTelefone" placeholder="Telefone" class="form-control ddd_tel">
                         </div>
 
                         <div>
-                            <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Mensagem"></textarea>
+                            <textarea name="mensagem" id="campoMensagem" cols="30" rows="10" class="form-control" placeholder="Mensagem"></textarea>
                             <div class="centralizarBotaoContato">
                                 <input type="submit" value="Enviar">
                             </div>
@@ -240,17 +276,17 @@
                     <img src="imagens/logo_branca.png" class="logoRodape" alt="">
 
                     <div>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/campostreinamentos" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=554791645886&text=Ol%C3%A1,%20estou%20enviando%20essa%20mensagem%20atrav%C3%A9s%20do%20site%20da%20Campos%20Treinamentos." target="_blank"><i class="fa-brands fa-whatsapp" target="_blank"></i></a>
+                        <a href="https://www.linkedin.com/company/campos-treinamentos/about/?viewAsMember=true" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div class="col-md-9 linksRodape">
-                    <a class="nav-link" href="#">Início</a>
-                    <p class="nav-link" onclick="window.scrollTo(0, scrollSobre)">Campos Treinamentos</p>
-                    <p class="nav-link" onclick="window.scrollTo(0, scrollTreinamentos)">Treinamentos</p>
-                    <p class="nav-link" onclick="window.scrollTo(0, scrollConsultoria)">Consultoria</p>
+                    <a class="nav-link" href="index.html">Início</a>
+                    <a class="nav-link" href="index.html#sobre">Campos Treinamentos</a>
+                    <a class="nav-link" href="index.html#treinamentos">Treinamentos</a>
+                    <a class="nav-link" href="index.html#consultoria">Consultorias</a>
                     <a class="nav-link" href="contato.html">Contato</a>
                 </div>
             </div>
